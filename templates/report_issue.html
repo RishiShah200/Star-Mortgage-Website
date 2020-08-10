@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Mortgage</title>
+
+    <link rel="canonical" href="https://rishishah.tech" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/template.js') }}">
+
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+
+    {% extends "template.html" %}
+    {% block content %}
+
+
+    <h1 class="title is-1 animate__animated animate__bounce has-text-centered">
+        &nbsp;Feedback
+    </h1>
+
+    <form class="form-horizontal" action="php-test.php" method="POST">
+        <div class="field">
+            <label class="label" for="name">Name</label>
+            <div class="control">
+                <input name="user_name" id="user_name" class="input" type="text" placeholder="Text input" minlength="4" maxlength="30" required>
+            </div>
+            <p id="name_help" class="help is-danger">Type your name here</p>
+        </div>
+
+        <div class="field">
+            <label class="label" for="email">Email</label>
+            <div class="control has-icons-left has-icons-right">
+                <input name="user_email" id="email" class="input" type="email" placeholder="Email input" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+            </div>
+            <p id="email_help" class="help is-danger">This email is invalid</p>
+        </div>
+
+        <div class="field">
+            <label class="label" for="subject">Subject</label>
+            <div class="control">
+                <div class="select">
+                    <select id = "subject" name="user_subject">
+                        <option>Issue with website</option>
+                        <option>Other Problems</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label" for="message">Message</label>
+            <div class="control">
+                <textarea id="message" name="user_message" class="textarea" placeholder="Textarea" required></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button type="submit" class="button is-link">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="static\js\template.js"></script>
+    {% endblock %}
+</body>
+
+</html>

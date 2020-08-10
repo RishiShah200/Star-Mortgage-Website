@@ -1,0 +1,35 @@
+/* .background-style {
+    just for the part that is animated at the top
+    background: #333;
+    padding-top: 5em;
+    justify-content: center;
+} */
+
+.navbar-item:hover {
+    background-color: rgba(104, 102, 102, 0.562) !important;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 50%);
+}
+
+.imgPad {
+    background-color: white;
+    padding: 1em;
+}
+
+.is-rounded{
+    border-radius: 50%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* input:valid{
+    border-color: greenyellow;
+}
+
+input:invalid{
+    border-color: red;
+} */

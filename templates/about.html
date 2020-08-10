@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Mortgage</title>
+
+    <link rel="canonical" href="https://rishishah.tech" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/lux/bulmaswatch.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/template.js') }}">
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div class="container">
+        <div class="ourProductsTitle has-text-left">
+            <h2 class="title is-2 animate__animated animate__bounce">
+                &nbsp;About Us
+            </h2>
+            <p class="is-size-4 mx-6 px-6">
+                Star Mortgage is a team of experts working together for over 15 years serving many customers to make their dream come true. Located in
+                Jamesburg, New Jersey, we are committed to making your mortgage and refinancing experience
+                exceptional.
+
+                <br>
+                <br>
+
+                We know that each customer has their own specific needs, so we strive to make sure
+                those needs are met using our vast selection of products, investment tools, mortgages, and top
+                quality service and focused individual attention.
+
+                <br>
+                <br>
+
+                Modern technology makes it much easier and more productive to help your refinancing needs. Through
+                our website, you can submit an on-line, secure loan application or apply for a home loan. You can
+                also evaluate your different financing options using our interactive calculators to help suit your
+                needs.
+
+            </p>
+            <br>
+        </div>
+
+        <h2 class="title is-2 animate__animated animate__bounce">
+            &nbsp;Our Team
+        </h2>
+
+        <div class="columns">
+            <div class="column">
+                <div id="cardPurchaseHome" class="card">
+                    <!--animate__animated animate__zoomIn animate__delay-2s !-->
+                    <div class="card-image imgPad has-text-centered">
+                        <figure class="image is-inline-block is-128x128">
+                            <img class="is-rounded"
+                                src="https://bulma.dev/placeholder/pictures/bg_circle.svg?primary=00d1b2" style="border-radius: 50%;">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-3">Sujata Shah</h3>
+                        <h4 class="subtitle is-4">Managing Member</h4>
+                        <div class="content">
+                            <ul>
+                                <li>Sujata Shah has more than 15 years of experience in the mortgage industry, helping serve numerous clients with her mortgage experience</li>
+                                <li>Together we have closed many loans, including conventional, High Balance, Jumbo, FHA (203-B, 203-K), VA, and VA-all
+                            </ul>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="" target="_blank" class="card-footer-item">Learn
+                            More</a>
+                    </footer>
+                </div>
+            </div>
+            <div class="column">
+                <div id="cardRefinanceHome" class="card">
+                    <div class="card-image imgPad has-text-centered">
+                        <figure class="image is-inline-block is-128x128">
+                            <img class="is-rounded"
+                                src="https://bulma.dev/placeholder/pictures/bg_circle.svg?primary=00d1b2" style="border-radius: 50%;">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-3">PERSON</h3>
+                        <h4 class="subtitle is-4">2019 – Present</h4>
+                        <div class="content">
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="" target="_blank" class="card-footer-item">Learn More</a>
+                    </footer>
+                </div>
+            </div>
+            <div class="column">
+                <div id="cardCSC" class="card">
+                    <div class="card-image imgPad has-text-centered">
+                        <figure class="image is-inline-block is-128x128">
+                            <img class="is-rounded"
+                                src="https://bulma.dev/placeholder/pictures/bg_circle.svg?primary=00d1b2" style="border-radius: 50%;">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-3">PERSON</h3>
+                        <h4 class="subtitle is-4">2018 – Present</h4>
+                        <div class="content">
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="" target="_blank" class="card-footer-item">Learn
+                            More</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static\js\template.js"></script>
+    {% endblock %}
+
+</body>
+
+</html>

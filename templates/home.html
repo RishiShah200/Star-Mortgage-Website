@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Mortgage</title>
+
+    <link rel="canonical" href="https://rishishah.tech" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/template.js') }}">
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div class="ourProductsTitle has-text-centered">
+        <h2 class="title is-2 animate__animated animate__bounce">
+            &nbsp;Our Products
+        </h2>
+        <p class="is-size-4 mx-6 px-6">
+            No matter what type of loan you are looking for, we are there with you every
+            step of the way to guide you along your loan experience. Let us find the perfect loan that works for
+            you.
+        </p>
+        <br>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div id="cardPurchaseHome" class="card">
+                <!--animate__animated animate__zoomIn animate__delay-2s !-->
+                <div class="card-image imgPad has-text-centered">
+                    <figure class="image imgPad">
+                        <!-- <img src="static\svg\home-run.svg"> -->
+                        <i class="fas fa-home fa-10x"></i>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <h3 class="title is-3">Purchase a Home</h3>
+                    <h4 class="subtitle is-4">Subtitle</h4>
+                    <div class="content">
+                        <ul>
+                            <li>Whether you’re buying your first home or your vacation getaway, we have the
+                                mortgage solution that works best for you. Get your custom rate quote today.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="" target="_blank" class="card-footer-item">Learn
+                        More</a>
+                </footer>
+            </div>
+        </div>
+        <div class="column">
+            <div id="cardRefinanceHome" class="card">
+                <div class="card-image">
+                    <figure class="image imgPad">
+                        <img src="static\svg\money.svg">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <h3 class="title is-3">Refinance Your Home</h3>
+                    <h4 class="subtitle is-4">Subtitle</h4>
+                    <div class="content">
+                        <ul>
+                            <li>We are fully committed to helping you refinance with competitive rates and the
+                                lowest fees industry wide.</li>
+                            <li>Check out or Low Rates, Calculate your Payment, and
+                                Get Started Today.</li>
+                        </ul>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="" target="_blank" class="card-footer-item">Learn More</a>
+                </footer>
+            </div>
+        </div>
+        <div class="column">
+            <div id="cardApplyNow" class="card">
+                <div class="card-image">
+                    <figure class="image imgPad has-text-centered">
+                        <!-- <img src="https://avatars0.githubusercontent.com/u/30937952?s=200&v=4"> -->
+                        <!--https://avatars3.githubusercontent.com/u/1531383?s=460&amp;v=4-->
+                        <i class="fas fa-money-check-alt fa-10x"></i>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <h3 class="title is-3">Apply Now</h3>
+                    <h4 class="subtitle is-4">Subtitle</h4>
+                    <div class="content">
+                        <ul>
+                            <li>Our secure loan application takes about [MINUTES] to complete, and is required
+                                for a “Pre-Approval”.
+                            </li>
+                            <li>You will be contacted by our team once your application
+                                has been submitted.</li>
+                        </ul>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="" target="_blank" class="card-footer-item">Learn
+                        More</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="static\js\template.js"></script>
+    {% endblock %}
+
+</body>
+
+</html>
