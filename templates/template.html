@@ -9,8 +9,7 @@
     <nav id="navBar" class="navbar is-fixed-top is-tab is-active" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item">
-                <!-- <h5 class="title is-5 has-text-dark">Star Mortgage</h5> -->
-                <img src="{{ url_for('static', filename='png/starmortgagelogo-removebg-preview.png') }}">
+                <img src="{{ url_for('static', filename='png/star_mortgage_logo.png') }}" width="112" height="50">
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                 <span aria-hidden="true"></span>
@@ -31,6 +30,9 @@
                 </a>
                 <a class="navbar-item" href="{{ url_for('testimonials') }}">
                     Testimonials
+                </a>
+                <a class="navbar-item" href="{{ url_for('apply') }}">
+                    Apply
                 </a>
 
                 <div class="navbar-item has-dropdown is-hoverable">

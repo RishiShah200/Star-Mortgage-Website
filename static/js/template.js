@@ -65,10 +65,11 @@ user_name.addEventListener("input", function (event) {
     })
 
 const mode_toggle = document.getElementById("switch_example");
+const theme_text = document.getElementById("theme")
 
 mode_toggle.addEventListener("input", function (event) {
-    if (mode_toggle.checked.checked === false){
-        console.log("cheecking");
+    if (mode_toggle.checked.checked === true){
+        theme_text.href = "https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css"
+        
     }
-
     })

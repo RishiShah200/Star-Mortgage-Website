@@ -22,6 +22,10 @@ def testimonials():
 def about():
   return render_template("about.html")
 
+@app.route("/apply")
+def apply():
+  return render_template("apply.html")
+
 @app.route("/contact")
 def contact():
   return render_template("contact.html")
@@ -46,14 +50,6 @@ def report_issue():
 @app.route("/loan_programs")
 def loan_programs():
   return render_template("loan_programs.html")
-
-# @app.route('/report_issue', methods=['GET', 'POST'])
-# def form():
-#     return render_template('report_isue.html')
-
-# @app.route('/hello', methods=['GET', 'POST'])
-# def hello():
-#     return render_template('greeting.html', say=request.form['say'], to=request.form['to'])
 
 
 if __name__ == "__main__":
