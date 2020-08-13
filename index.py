@@ -3,6 +3,9 @@ from flask import Flask, request, render_template
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import string
+
+import config
 
 app = Flask(__name__)
 
@@ -65,14 +68,14 @@ def my_form():
         message = request.form.get('message')
         options = ["Refinancing","Purchasing a Home","Loan Programs","Other"]
         send_email(name,reply_to,options[interest],outreach,message)
-    return render_template('home.html')
+    return render_template('apply_success.html')
 
 def send_email(name,reply_to,interest,outreach,message):
   mail_content = str(name + " filled out the contact form.\n " + name + " is interested in " + interest + " and found out about this through " + outreach + ".\n " + "Their message is: "
   + message)
   #The mail addresses and password
-  sender_address = 'hahsihsri@gmail.com'
-  sender_pass = 'ihsri_hahs25'
+  sender_address = config.GMAIL_ADDRESS
+  sender_pass = config.GMAIL_PASSWORD
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
@@ -84,10 +87,10 @@ def send_email(name,reply_to,interest,outreach,message):
   <html>
     <head></head>
     <body>
-      <h1>Reply-To: <a href="mailto:""" + receiver_address + """"\></a></h1>
+      <h1>Reply-To:<a href="mailto:{receiver_address}"\>Sender Email</a></h1>
     </body>
   </html>
-  """
+  """.format(receiver_address=receiver_address)
 
   # Record the MIME types of both parts - text/plain and text/html.
   part1 = MIMEText(mail_content, 'plain')
