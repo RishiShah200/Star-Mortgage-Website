@@ -72,4 +72,21 @@ mode_toggle.addEventListener("input", function (event) {
         theme_text.href = "https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css"
         
     }
-    })
+})
+
+var nodeArray = [
+    document.querySelector('#cardPurchaseHome'),
+    document.querySelector('#cardRefinanceHome'),
+    document.querySelector('#cardApplyNow')
+    // ,
+    // document.querySelector('#cardChemOly'),
+
+    // document.querySelector('#cardKumon'),
+    // document.querySelector('#cardSBPL'),
+    // document.querySelector('#cardSeniorCenter'),
+    // document.querySelector('#cardHighSchool')
+];
+
+ScrollReveal({ reset: true, duration: 2000, distance: '25%', scale: 0.85, delay: 200}); //changes for all the elements
+//ScrollReveal().reveal('#cardRobotics'); //can add ScrollReveal().reveal('.EXAMPLE', { delay: 500 }); to target a specific element
+ScrollReveal().reveal(nodeArray)

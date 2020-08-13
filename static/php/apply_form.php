@@ -1,13 +1,19 @@
 <?php
 
+ini_set('SMTP', "smtp.gmail.com");
+ini_set('smtp_port', "25");
+ini_set('username',"hahsihsri@gmail.com");
+ini_set('password','ihsri_hahs25');
+ini_set('sendmail_from', "hahsihsri@gmail.com");
+
 $errors = '';
 
 $myemail = 'rishishah200@gmail.com';//<—–Put Your email address here. 
 
 
-if(empty($_POST['name']) ||empty($_POST['email']) || empty($_POST['message']) || empty($_POST['interest']) || empty($_POST['outreach'])){
-    $errors .= "\n All fields are required";
-}
+// if(empty($_POST['name']) ||empty($_POST['email']) || empty($_POST['message']) || empty($_POST['interest']) || empty($_POST['outreach'])){
+//     $errors .= "\n All fields are required";
+// }
 
 $name = $_POST['name'];
 
@@ -19,11 +25,11 @@ $interest = $_POST['interest'];
 
 $outreach = $_POST['outreach'];
 
-if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address)){
-    $errors .= "\n Error: Invalid email address";
-}
+// if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address)){
+//     $errors .= "\n Error: Invalid email address";
+// }
 
-if(empty($errors)){
+// if(empty($errors)){
 
     $to = $myemail;
 
@@ -45,4 +51,4 @@ if(empty($errors)){
 
     header('Location: home.html');
 
-}
+// }

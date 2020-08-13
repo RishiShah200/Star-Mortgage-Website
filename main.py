@@ -1,5 +1,9 @@
 from flask import Flask, request, render_template
 
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -51,6 +55,55 @@ def report_issue():
 def loan_programs():
   return render_template("loan_programs.html")
 
+@app.route("/form", methods=["GET", "POST"])
+def my_form():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        reply_to = request.form.get('email')
+        interest = int(request.form.get('interest'))
+        outreach = request.form.get('outreach')
+        message = request.form.get('message')
+        options = ["Refinancing","Purchasing a Home","Loan Programs","Other"]
+        send_email(name,reply_to,options[interest],outreach,message)
+    return render_template('home.html')
+
+def send_email(name,reply_to,interest,outreach,message):
+  mail_content = str(name + " filled out the contact form.\n " + name + " is interested in " + interest + " and found out about this through " + outreach + ".\n " + "Their message is: "
+  + message)
+  #The mail addresses and password
+  sender_address = 'hahsihsri@gmail.com'
+  sender_pass = 'ihsri_hahs25'
+  receiver_address = reply_to
+  #Setup the MIME
+  message = MIMEMultipart()
+  message['From'] = sender_address
+  message['To'] = receiver_address
+  message['Subject'] = name + " filled out the contact form"  #The subject line
+
+  html = """\
+  <html>
+    <head></head>
+    <body>
+      <h1>Reply-To: <a href="mailto:""" + receiver_address + """"\></a></h1>
+    </body>
+  </html>
+  """
+
+  # Record the MIME types of both parts - text/plain and text/html.
+  part1 = MIMEText(mail_content, 'plain')
+  part2 = MIMEText(html, 'html')
+
+  #The body and the attachments for the mail
+  message.attach(part1)
+  message.attach(part2)
+  #Create SMTP session for sending the mail
+  session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+  session.starttls() #enable security
+  session.login(sender_address, sender_pass) #login with mail_id and password
+  text = message.as_string()
+  session.sendmail(sender_address, receiver_address, text)
+  session.quit()
+  print('Mail Sent')
 
 if __name__ == "__main__":
     app.run(debug=True)

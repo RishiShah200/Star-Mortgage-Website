@@ -1,17 +1,19 @@
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
-from wtforms.validators import DataRequired,Length, Email, EqualTo
+# using SendGrid's Python Library
+# https://github.com/sendgrid/sendgrid-python
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
-class RegistrationForm(FlaskForm):
-    username = StringField('Username',validators=[DataRequired(),Length(min=2,max=20)])
-    email = StringField('Email',validators=[DataRequired(),Email()])
-    password = PasswordField('Password',validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password',validators=[DataRequired(),EqualTo('password')])
-
-    submit = SubmitField('Sign Up')
-
-class LoginForm(FlaskForm):
-    email = StringField('Email',validators=[DataRequired(),Email()])
-    password = PasswordField('Password',validators=[DataRequired()])
-    remember = BooleanField('Remember Me')
-    submit = SubmitField('Login')
+message = Mail(
+    from_email='rishishah200@gmail.com',
+    to_emails='rishishah200@gmail.com',
+    subject='Sending with Twilio SendGrid is Fun',
+    html_content='<strong>and easy to do anywhere, even with Python</strong>')
+try:
+    sg = SendGridAPIClient(os.environ.get('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'))
+    response = sg.send(message)
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
+except Exception as e:
+    print(e.message)
