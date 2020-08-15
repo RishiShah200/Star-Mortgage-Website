@@ -24,69 +24,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// document.getElementById("p1").innerHTML = "New text!";
+var nodeArray = [
+    document.querySelector('#cardPurchaseHome'),
+    document.querySelector('#cardRefinanceHome'),
+    document.querySelector('#cardApplyNow'),
+
+    document.querySelector('#mortgageCalculator'),
+    document.querySelector('#principalCalculator'),
+    document.querySelector('#homeAffordabilityCalculator'),
+    document.querySelector('#homeValueEstimator')
+    // ,
+    // document.querySelector('#cardHighSchool')
+];
+
+ScrollReveal({ reset: true, duration: 2000, distance: '25%', scale: 0.85, delay: 200 }); //changes for all the elements
+//ScrollReveal().reveal('#cardRobotics'); //can add ScrollReveal().reveal('.EXAMPLE', { delay: 500 }); to target a specific element
+ScrollReveal().reveal(nodeArray);
+
+ScrollReveal().reveal('#cardPurchaseHome', {origin: 'left'})
+ScrollReveal().reveal('#cardRefinanceHome', {origin: 'bottom'})
+ScrollReveal().reveal('#cardApplyNow', {origin: 'right'})
+
+document.getElementById("p1").innerHTML = "New text!";
 
 const email = document.getElementById("email");
 const email_help = document.getElementById("email_help");
 
 
 email.addEventListener("input", function (event) {
-    if(email.validity.valid === false){
+    if (email.validity.valid === false) {
         email.classList.add("is-danger")
         email_help.classList.remove("is-success")
         email_help.classList.add("is-danger")
         email_help.innerHTML = "This email is invalid"
     }
-    else{
+    else {
         email.classList.remove("is-danger")
         email.classList.add("is-success")
         email_help.classList.remove("is-danger")
         email_help.classList.add("is-success")
         email_help.innerHTML = "This email is valid"
-        
+
     }
-    
-    })
+
+})
 
 const user_name = document.getElementById("user_name");
 const name_help = document.getElementById("name_help");
 
 user_name.addEventListener("input", function (event) {
-    if(user_name.validity.valid === false){
+    if (user_name.validity.valid === false) {
         user_name.classList.add("is-danger")
     }
-    else{
+    else {
         user_name.classList.remove("is-danger")
         user_name.classList.add("is-success")
         name_help.classList.remove("is-danger")
         name_help.classList.add("is-success")
     }
-    
-    })
 
-const mode_toggle = document.getElementById("switch_example");
-const theme_text = document.getElementById("theme")
-
-mode_toggle.addEventListener("input", function (event) {
-    if (mode_toggle.checked.checked === true){
-        theme_text.href = "https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css"
-        
-    }
 })
 
-var nodeArray = [
-    document.querySelector('#cardPurchaseHome'),
-    document.querySelector('#cardRefinanceHome'),
-    document.querySelector('#cardApplyNow')
-    // ,
-    // document.querySelector('#cardChemOly'),
 
-    // document.querySelector('#cardKumon'),
-    // document.querySelector('#cardSBPL'),
-    // document.querySelector('#cardSeniorCenter'),
-    // document.querySelector('#cardHighSchool')
-];
 
-ScrollReveal({ reset: true, duration: 2000, distance: '25%', scale: 0.85, delay: 200}); //changes for all the elements
-//ScrollReveal().reveal('#cardRobotics'); //can add ScrollReveal().reveal('.EXAMPLE', { delay: 500 }); to target a specific element
-ScrollReveal().reveal(nodeArray)
+

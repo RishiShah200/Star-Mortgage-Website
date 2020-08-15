@@ -6,7 +6,7 @@
 </head>
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
-    <nav id="navBar" class="navbar is-fixed-top is-tab is-active" role="navigation" aria-label="main navigation">
+    <nav id="navBar" class="navbar is-fixed-top is-tab is-active is-info" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item">
                 <img src="{{ url_for('static', filename='png/star_mortgage_logo.png') }}" width="112" height="50">
@@ -60,12 +60,12 @@
         </div>
     </nav>
 
-    <section class="section">
-        <div class="container">
+    <!-- <section class="section">
+        <div class="container"> -->
             {% block content %}
             {% endblock %}
-        </div>
-    </section>
+        <!-- </div>
+    </section> -->
 
     <footer class="footer hero has-text-light is-medium is-dark is-bold">
         <div class="content has-text-centered">

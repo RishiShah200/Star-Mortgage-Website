@@ -2,7 +2,7 @@
 <html lang="en" class="has-navbar-fixed-top">
 
 <head>
-{% include "header.html" %}
+    {% include "header.html" %}
 </head>
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
@@ -21,108 +21,121 @@
         </p>
         <br>
     </div>
-    <div class="columns">
-        <div class="column">
-            <div id="cardPurchaseHome" class="card">
-                <!--animate__animated animate__zoomIn animate__delay-2s !-->
-                <div class="card-image imgPad has-text-centered">
-                    <figure class="image imgPad">
-                        <!-- <img src="static\svg\home-run.svg"> -->
-                        <i class="fas fa-home fa-10x"></i>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <h3 class="title is-3">Mortgage Calculator</h3>
-                    <h4 class="subtitle is-4">2017 – Present</h4>
-                    <div class="content">
-                        <ul>
-                            <li>Get a custom rate and payment quote on a new mortgage.
-                            </li>
-                        </ul>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div id="mortgageCalculator" class="card">
+                        <!--animate__animated animate__zoomIn animate__delay-2s !-->
+                        <div class="card-image imgPad has-text-centered">
+                            <figure class="image imgPad">
+                                <!-- <img src="static\svg\home-run.svg"> -->
+                                <i class="fas fa-home fa-10x"></i>
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-3">Mortgage Calculator</h3>
+                            <h4 class="subtitle is-4">2017 – Present</h4>
+                            <div class="content">
+                                <ul>
+                                    <li>Get a custom rate and payment quote on a new mortgage.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{ url_for('mortgage_calculators') }}" class="card-footer-item">Learn
+                                More</a>
+                        </footer>
                     </div>
                 </div>
-                <footer class="card-footer">
-                    <a href="{{ url_for('mortgage_calculators') }}" class="card-footer-item">Learn
-                        More</a>
-                </footer>
-            </div>
-        </div>
-        <div class="column">
-            <div id="cardRefinanceHome" class="card">
-                <div class="card-image">
-                    <figure class="image imgPad">
-                        <img src="static\svg\money.svg">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <h3 class="title is-3">Principal Calculator</h3>
-                    <h4 class="subtitle is-4">2019 – Present</h4>
-                    <div class="content">
-                        <ul>
-                            <li>We are fully committed to helping you refinance with competitive rates and the
-                                lowest fees industry wide.</li>
-                        </ul>
+                <div class="column">
+                    <div id="principalCalculator" class="card">
+                        <div class="card-image">
+                            <figure class="image imgPad">
+                                <img src="static\svg\money.svg">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-3">Principal Calculator</h3>
+                            <h4 class="subtitle is-4">2019 – Present</h4>
+                            <div class="content">
+                                <ul>
+                                    <li>We are fully committed to helping you refinance with competitive rates and the
+                                        lowest fees industry wide.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{ url_for('principal_calculator') }}" class="card-footer-item">Learn More</a>
+                        </footer>
                     </div>
                 </div>
-                <footer class="card-footer">
-                    <a href="{{ url_for('principal_calculator') }}" class="card-footer-item">Learn More</a>
-                </footer>
-            </div>
-        </div>
-        <div class="column">
-            <div id="cardApplyNow" class="card">
-                <div class="card-image">
-                    <figure class="image imgPad has-text-centered">
-                        <!-- <img src="https://avatars0.githubusercontent.com/u/30937952?s=200&v=4"> -->
-                        <!--https://avatars3.githubusercontent.com/u/1531383?s=460&amp;v=4-->
-                        <i class="fas fa-money-check-alt fa-10x"></i>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <h3 class="title is-3">Home Affordability Calculator</h3>
-                    <h4 class="subtitle is-4">2018 – Present</h4>
-                    <div class="content">
-                        <ul>
-                            <li>Estimate the home price you can afford using income and other information.</li>
-                        </ul>
+                <div class="column">
+                    <div id="homeAffordabilityCalculator" class="card">
+                        <div class="card-image">
+                            <figure class="image imgPad has-text-centered">
+                                <!-- <img src="https://avatars0.githubusercontent.com/u/30937952?s=200&v=4"> -->
+                                <!--https://avatars3.githubusercontent.com/u/1531383?s=460&amp;v=4-->
+                                <i class="fas fa-money-check-alt fa-10x"></i>
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-3">Home Affordability Calculator</h3>
+                            <h4 class="subtitle is-4">2018 – Present</h4>
+                            <div class="content">
+                                <ul>
+                                    <li>Estimate the home price you can afford using income and other information.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{ url_for('affordability_calculator') }}" class="card-footer-item">Learn More</a>
+                        </footer>
                     </div>
                 </div>
-                <footer class="card-footer">
-                    <a href="{{ url_for('affordability_calculator') }}" class="card-footer-item">Learn More</a>
-                </footer>
-            </div>
-        </div>
-        <div class="column">
-            <div id="cardApplyNow" class="card">
-                <div class="card-image">
-                    <figure class="image imgPad has-text-centered">
-                        <img src="static\svg\icons8-home.svg">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <h3 class="title is-3">Home Value Estimator</h3>
-                    <h4 class="subtitle is-4">2018 – Present</h4>
-                    <div class="content">
-                        <ul>
-                            <li>Estimate the value of a home you are looking at or are interested in selling</li>
-                        </ul>
+                <div class="column">
+                    <div id="homeValueEstimator" class="card">
+                        <div class="card-image">
+                            <figure class="image imgPad has-text-centered">
+                                <img src="static\svg\icons8-home.svg">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-3">Home Value Estimator</h3>
+                            <h4 class="subtitle is-4">2018 – Present</h4>
+                            <div class="content">
+                                <ul>
+                                    <li>Estimate the value of a home you are looking at or are interested in selling
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="" class="card-footer-item">Learn More</a>
+                        </footer>
                     </div>
                 </div>
-                <footer class="card-footer">
-                    <a href="" class="card-footer-item">Learn More</a>
-                </footer>
             </div>
         </div>
-    </div>
+    </section>
 
-    <h1 class="is-subtitle is-1 animate__animated animate__bounce">
-        <strong>Disclaimer:<br></strong>
-        Information and interactive calculators are made available to you as self-help tools for your independent
-        use and are not intended to provide investment advice. We cannot and do not guarantee their applicability or
-        accuracy in regards to your individual circumstances. All examples are hypothetical and are for illustrative
-        purposes. We encourage you to seek personalized advice from qualified professionals regarding all personal
-        finance issues.
-    </h1>
+    <section class="section">
+        <div class="container">
+            <h1 class="is-subtitle is-1 animate__animated animate__bounce">
+                <strong>Disclaimer:<br></strong>
+                Information and interactive calculators are made available to you as self-help tools for your
+                independent
+                use and are not intended to provide investment advice. We cannot and do not guarantee their
+                applicability or
+                accuracy in regards to your individual circumstances. All examples are hypothetical and are for
+                illustrative
+                purposes. We encourage you to seek personalized advice from qualified professionals regarding all
+                personal
+                finance issues.
+            </h1>
+        </div>
+    </section>
     <script src="static\js\template.js"></script>
     {% endblock %}
 

@@ -13,8 +13,10 @@
 
     <h1 class="title is-1 animate__animated animate__bounce has-text-centered">
         &nbsp;Thank you for filling out the Apply form. We will get back to you shortly.
+    </h1>
+    <section class="section has-text-centered">
         <div class="pen">
-            <svg class="progress-icon" width="250" height="250" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <svg class="progress-icon" width="350" height="350" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <g class="tick-icon" stroke-width="2" stroke="#14D790" fill="none" transform="translate(1, 1.2)">
                     <path id="tick-outline-path"
                         d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z" opacity="0" />
@@ -22,8 +24,7 @@
                 </g>
             </svg>
         </div>
-    </h1>
-
+    </section>
     <script src="static\js\template.js"></script>
     <script>
         const { tween, physics, styler, easing, value } = window.popmotion;
@@ -62,6 +63,13 @@
             init();
         } else {
             document.addEventListener('DOMContentLoaded', init);
+        }
+
+        var myFunc = function () {
+            document.location.href = "{{ url_for('home') }}";
+        }
+        window.onload = function () {
+            setTimeout(myFunc, 3000);
         }
 
 

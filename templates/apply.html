@@ -2,7 +2,7 @@
 <html lang="en" class="has-navbar-fixed-top">
 
 <head>
-{% include "header.html" %}
+    {% include "header.html" %}
 </head>
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
@@ -15,79 +15,84 @@
         &nbsp;Apply Now
     </h1>
 
-    <form class="form-horizontal" action="/form" method="POST">
-        <div class="field">
-            <label class="label" for="name">Name</label>
-            <div class="control">
-                <input name="name" id="name" class="input" type="text" placeholder="Text input" minlength="4"
-                    maxlength="30" required>
-            </div>
-            <p id="name_help" class="help">Type your name here</p>
-        </div>
-
-        <div class="field">
-            <label class="label" for="email">Email</label>
-            <div class="control has-icons-left has-icons-right">
-                <input name="email" id="email" class="input" type="email" placeholder="Email input" value=""
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </span>
-            </div>
-            <p id="email_help" class="help">This email is invalid</p>
-        </div>
-
-        <div class="field">
-            <label class="label" for="interest">What were you interested in?</label>
-            <div class="control">
-                <div class="select">
-                    <select id="interest" name="interest">
-                        <option value="0">Refinancing</option>
-                        <option value="1">Purchasing a Home</option>
-                        <option value="2">Loan Programs</option>
-                        <option value="3">Other</option>
-                    </select>
+    <section class="section">
+        <div class="container">
+            <form class="form-horizontal" action="/form" method="POST">
+                <div class="field">
+                    <label class="label" for="name">Name</label>
+                    <div class="control">
+                        <input name="name" id="name" class="input" type="text" placeholder="Text input" minlength="4"
+                            maxlength="30" required>
+                    </div>
+                    <p id="name_help" class="help">Type your name here</p>
                 </div>
-            </div>
+
+                <div class="field">
+                    <label class="label" for="email">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input name="email" id="email" class="input" type="email" placeholder="Email input" value=""
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p id="email_help" class="help">This email is invalid</p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="interest">What were you interested in?</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="interest" name="interest">
+                                <option value="0">Refinancing</option>
+                                <option value="1">Purchasing a Home</option>
+                                <option value="2">Loan Programs</option>
+                                <option value="3">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="other"></label>
+                    <div id="other_input" class="control" hidden>
+                        <input id="subject_input" name="other" id="other" class="input" type="text"
+                            placeholder="Text input" minlength="4" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="outreach">How did you hear about us?</label>
+                    <div class="control">
+                        <input name="outreach" id="outreach" class="input" type="text" placeholder="Text input"
+                            minlength="4" maxlength="100" required>
+                    </div>
+                    <p id="outreach_help" class="help">Type how you found out about us!</p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="message">Message</label>
+                    <div class="control">
+                        <textarea id="message" name="message" class="textarea" placeholder="Textarea"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button type="submit" value="Submit" class="button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-        <div class="field">
-            <label class="label" for="other"></label>
-            <div id="other_input" class="control" hidden>
-                <input id="subject_input" name="other" id="other" class="input" type="text" placeholder="Text input" minlength="4"
-                    maxlength="50">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label" for="outreach">How did you hear about us?</label>
-            <div class="control">
-                <input name="outreach" id="outreach" class="input" type="text" placeholder="Text input" minlength="4"
-                    maxlength="100" required>
-            </div>
-            <p id="outreach_help" class="help">Type how you found out about us!</p>
-        </div>
-
-        <div class="field">
-            <label class="label" for="message">Message</label>
-            <div class="control">
-                <textarea id="message" name="message" class="textarea" placeholder="Textarea" required></textarea>
-            </div>
-        </div>
-
-        <div class="field is-grouped">
-            <div class="control">
-                <button type="submit" value="Submit" class="button is-link">Submit</button>
-            </div>
-        </div>
-    </form>
+     </section>
 
 
-    <script src="static\js\apply_form.js"></script>
-    {% endblock %}
+        <script src="static\js\apply_form.js"></script>
+        {% endblock %}
 </body>
 
 </html>
