@@ -8,8 +8,6 @@ import string
 import config
 import os
 
-from boto.s3.connection import S3Connection
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -79,9 +77,9 @@ def send_email(name,reply_to,interest,outreach,message):
   mail_content = str(name + " filled out the contact form.\n " + name + " is interested in " + interest + " and found out about this through " + outreach + ".\n " + "Their message is: "
   + message)
   #The mail addresses and password
-  sender_address = S3Connection(os.environ['GMAIL_ADDRESS'])
+  sender_address = os.environ.get('GMAIL_ADDRESS')
   print(sender_address)
-  sender_pass = S3Connection(os.environ['GMAIl_PASSWORD'])
+  sender_pass = os.environ.get('GMAIL_PASSWORD')
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
