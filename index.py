@@ -5,7 +5,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import string
 
-import config
 import os
 
 app = Flask(__name__)
