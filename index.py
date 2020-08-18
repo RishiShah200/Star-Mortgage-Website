@@ -65,21 +65,24 @@ def my_form():
         name = request.form.get('name')
         reply_to = request.form.get('email')
         interest = int(request.form.get('interest'))
-        print(str(interest))
+        # print(str(interest))
         outreach = request.form.get('outreach')
         message = request.form.get('message')
         options = ["Refinancing","Purchasing a Home","Loan Programs","Other"]
-        print(options[interest])
+        # print(options[interest])
         send_email(name,reply_to,options[interest],outreach,message)
     return render_template('apply_success.html')
 
 def send_email(name,reply_to,interest,outreach,message):
+  # os.environ["GMAIL_ADDRESS"] = "hahsihsri@gmail.com" #need to set local environment variable. This exists on heroku but not local which is why it doesnt work.
+  # os.environ["GMAIL_PASSWORD"] = "Musicisawesome0421"
   mail_content = str(name + " filled out the contact form.\n " + name + " is interested in " + interest + " and found out about this through " + outreach + ".\n " + "Their message is: "
   + message)
   #The mail addresses and password
   sender_address = os.environ.get('GMAIL_ADDRESS')
   print(sender_address)
   sender_pass = os.environ.get('GMAIL_PASSWORD')
+  print(sender_pass)
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
