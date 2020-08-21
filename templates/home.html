@@ -10,13 +10,13 @@
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
 
     <section class="hero has-background is-info is-fullheight">
-        <img class="hero-background is-transparent" id="background-image" src="static\png\star-mortgage-building.png">
+        <img class="hero-background is-transparent background-image" src="static\png\star-mortgage-building.png">
         <div class="hero-head">
         </div>
 
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title is-size-1 animate__animated animate__bounce">
+                <h1 class="title animate__animated animate__bounce" style="font-size: 5em;">
                     Star Mortgage
                 </h1>
                 <p class="subtitle">
@@ -28,7 +28,7 @@
 
     {% extends "template.html" %}
     {% block content %}
-    <section class="section" style="background-color:hsl(0, 0%, 96%);">
+    <section class="section has-background-light" >
         <div class="container">
             <div class="ourProductsTitle has-text-centered">
                 <h2 class="title is-2 animate__animated animate__bounce">
@@ -46,24 +46,21 @@
                     <div id="cardPurchaseHome" class="card">
                         <!--animate__animated animate__zoomIn animate__delay-2s !-->
                         <div class="card-image imgPad has-text-centered">
-                            <figure class="image imgPad">
-                                <!-- <img src="static\svg\home-run.svg"> -->
+                            <figure class="image">
+                                <!-- <img src="static\png\purchase-home.jpg"> -->
                                 <i class="fas fa-home fa-10x"></i>
                             </figure>
                         </div>
                         <div class="card-content">
                             <h3 class="title is-3">Purchase a Home</h3>
-                            <h4 class="subtitle is-4">Subtitle</h4>
+                            <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
                             <div class="content">
-                                <ul>
-                                    <li>Whether you’re buying your first home or your vacation getaway, we have the
-                                        mortgage solution that works best for you. Get your custom rate quote today.
-                                    </li>
-                                </ul>
+                                Whether you’re buying your first home or your vacation getaway, we have the
+                                mortgage solution that works best for you. Get your custom rate quote today.
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="{{ url_for('apply') }}" class="card-footer-item">Learn
+                            <a href="{{ url_for('purchase_a_home') }}" class="card-footer-item">Learn
                                 More</a>
                         </footer>
                     </div>
@@ -71,24 +68,22 @@
                 <div class="column">
                     <div id="cardRefinanceHome" class="card">
                         <div class="card-image">
-                            <figure class="image imgPad">
-                                <img src="static\svg\money.svg">
+                            <figure class="image imgPad has-text-centered">
+                                <!-- <img src="static\svg\money.svg"> -->
+                                <i class="fas fa-calculator fa-10x"></i>
                             </figure>
                         </div>
                         <div class="card-content">
                             <h3 class="title is-3">Refinance Your Home</h3>
-                            <h4 class="subtitle is-4">Subtitle</h4>
+                            <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
                             <div class="content">
-                                <ul>
-                                    <li>We are fully committed to helping you refinance with competitive rates and the
-                                        lowest fees industry wide.</li>
-                                    <li>Check out or Low Rates, Calculate your Payment, and
-                                        Get Started Today.</li>
-                                </ul>
+                                We are fully committed to helping you refinance with competitive rates and the
+                                lowest fees industry wide.
+                                Check out orr Low Rates and Get Started Today.
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="{{ url_for('apply') }}" class="card-footer-item">Learn More</a>
+                            <a href="{{ url_for('refinance') }}" class="card-footer-item">Learn More</a>
                         </footer>
                     </div>
                 </div>
@@ -103,15 +98,12 @@
                         </div>
                         <div class="card-content">
                             <h3 class="title is-3">Apply Now</h3>
-                            <h4 class="subtitle is-4">Subtitle</h4>
+                            <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
                             <div class="content">
-                                <ul>
-                                    <li>Our secure loan application takes about [MINUTES] to complete, and is required
-                                        for a “Pre-Approval”.
-                                    </li>
-                                    <li>You will be contacted by our team once your application
-                                        has been submitted.</li>
-                                </ul>
+                                Our secure loan application is quick to complete.
+                                You will be contacted by our team once your application
+                                has been submitted.
+
                             </div>
                         </div>
                         <footer class="card-footer">
@@ -123,6 +115,7 @@
             </div>
         </div>
     </section>
+    <script src="static\js\template.js"></script>
     {% endblock %}
 </body>
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    {% include "header.html" %}
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+    <section class="hero has-background is-info is-medium">
+        <img class="hero-background is-transparent background-image" src="\static\png\refinance-home.jpg">
+        <div class="hero-head">
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title animate__animated animate__bounce" style="font-size: 5em;">
+                    Refinance
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    {% extends "template.html" %}
+    {% block content %}
+    <section class="section" style="background-color:hsl(0, 0%, 96%);">
+        <div class="container">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-two-thirds">
+                    <div class="ourProductsTitle has-text-left">
+                        <h1 class="title is-1 animate__animated animate__bounce">
+                            <strong>Serve your refinancing needs with Star Mortgage</strong>
+                        </h1>
+                        <p class="is-size-5">
+                            Choosing the right mortgage for your home is among the most important financial decisions
+                            you will
+                            make. Trust our licensed and experienced team in helping you find the right
+                            mortgage. We have many custom loan options to suit your needs. Let us help you find the
+                            right
+                            mortgage now!
+                        </p>
+                        <br>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column">
+                            <div id="cardApplyNow" class="card">
+                                <div class="card-image">
+                                    <figure class="image imgPad has-text-centered">
+                                        <!-- <img src="https://avatars0.githubusercontent.com/u/30937952?s=200&v=4"> -->
+                                        <!--https://avatars3.githubusercontent.com/u/1531383?s=460&amp;v=4-->
+                                        <i class="fas fa-money-check-alt fa-10x"></i>
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="title is-3">Apply Now</h3>
+                                    <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
+                                    <div class="content">
+                                        Our secure loan application is quick to complete.
+                                        You will be contacted by our team once your application
+                                        has been submitted.
+        
+                                    </div>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="{{ url_for('apply') }}" class="card-footer-item">Learn
+                                        More</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+            
+        </div>
+    </section>
+    {% endblock %}
+</body>
+
+</html>

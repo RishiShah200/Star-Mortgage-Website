@@ -56,18 +56,18 @@ outreach.addEventListener("input", function (event) {
     }
     })
 
-var interest = document.getElementById("interest");
+// var interest = document.getElementById("interest");
 
-interest.addEventListener("input", function (event) {
-    var result = interest.options[interest.selectedIndex].text;
-    var other_input = document.getElementById("other_input");
-    var subject_input = document.getElementById("subject_input");
-    if (result == "Other") {
-        other_input.hidden = false
-        subject_input.setAttribute("required","false")
-    }
-    else{
-        other_input.hidden = true
-        subject_input.setAttribute("required","true")
-    }
-})
+// interest.addEventListener("input", function (event) {
+//     var result = interest.options[interest.selectedIndex].text;
+//     var other_input = document.getElementById("other_input");
+//     var subject_input = document.getElementById("subject_input");
+//     if (result == "Other") {
+//         other_input.hidden = false
+//         subject_input.setAttribute("required","false")
+//     }
+//     else{
+//         other_input.hidden = true
+//         subject_input.setAttribute("required","true")
+//     }
+// })

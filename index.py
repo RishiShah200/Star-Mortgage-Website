@@ -49,6 +49,14 @@ def principal_calculator():
 def affordability_calculator():
   return render_template("calculators/affordability_calculator.html")
 
+@app.route("/home_subpages/purchase_a_home")
+def purchase_a_home():
+  return render_template("home_subpages/purchase_a_home.html")
+
+@app.route("/home_subpages/refinance")
+def refinance():
+  return render_template("home_subpages/refinance.html")
+
 @app.route("/report_issue")
 def report_issue():
   return render_template("report_issue.html")
@@ -63,6 +71,7 @@ def my_form():
     if request.method == 'POST':
         name = request.form.get('name')
         reply_to = request.form.get('email')
+        print(request.form.get('interest'))
         interest = int(request.form.get('interest'))
         # print(str(interest))
         outreach = request.form.get('outreach')

@@ -39,7 +39,7 @@ input:invalid{
     overflow: hidden;
 }
 
-#background-image{
+.background-image{
     position: absolute;
     object-fit: cover;
     object-position: center center;
@@ -48,6 +48,5 @@ input:invalid{
 }
 
 .is-transparent{
-    opacity: 0.6;
+    opacity: 0.7;
 }
-
