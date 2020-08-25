@@ -66,6 +66,10 @@ def report_issue():
 def loan_programs():
   return render_template("loan_programs.html")
 
+@app.route("/faq")
+def faq():
+  return render_template("faq.html")
+
 @app.route("/form", methods=["GET", "POST"])
 def my_form():
     if request.method == 'POST':
@@ -80,6 +84,56 @@ def my_form():
         # print(options[interest])
         send_email(name,reply_to,options[interest],outreach,message)
     return render_template('apply_success.html')
+
+@app.route("/basic_form", methods=["GET", "POST"])
+def my_basic_form():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        reply_to = request.form.get('email')
+        send_basic_email(name,reply_to)
+    return render_template('apply_success.html')
+
+
+def send_basic_email(name,reply_to):
+  # os.environ["GMAIL_ADDRESS"] = "hahsihsri@gmail.com" #need to set local environment variable. This exists on heroku but not local which is why it doesnt work.
+  # os.environ["GMAIL_PASSWORD"] = "Musicisawesome0421"
+  mail_content = str(name + " filled out the contact form.\n ")
+  #The mail addresses and password
+  sender_address = os.environ.get('GMAIL_ADDRESS')
+  print(sender_address)
+  sender_pass = os.environ.get('GMAIL_PASSWORD')
+  print(sender_pass)
+  receiver_address = reply_to
+  #Setup the MIME
+  message = MIMEMultipart()
+  message['From'] = sender_address
+  message['To'] = receiver_address
+  message['Subject'] = name + " filled out the contact form"  #The subject line
+
+  html = """\
+  <html>
+    <head></head>
+    <body>
+      <h1>Reply-To:<a href="mailto:{receiver_address}"\>{receiver_address}</a></h1>
+    </body>
+  </html>
+  """.format(receiver_address=receiver_address)
+
+  # Record the MIME types of both parts - text/plain and text/html.
+  part1 = MIMEText(mail_content, 'plain')
+  part2 = MIMEText(html, 'html')
+
+  #The body and the attachments for the mail
+  message.attach(part1)
+  message.attach(part2)
+  #Create SMTP session for sending the mail
+  session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
+  session.starttls() #enable security
+  session.login(sender_address, sender_pass) #login with mail_id and password
+  text = message.as_string()
+  session.sendmail(sender_address, receiver_address, text)
+  session.quit()
+  print('Mail Sent')
 
 def send_email(name,reply_to,interest,outreach,message):
   # os.environ["GMAIL_ADDRESS"] = "hahsihsri@gmail.com" #need to set local environment variable. This exists on heroku but not local which is why it doesnt work.

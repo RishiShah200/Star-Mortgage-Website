@@ -32,9 +32,8 @@ var nodeArray = [
     document.querySelector('#mortgageCalculator'),
     document.querySelector('#principalCalculator'),
     document.querySelector('#homeAffordabilityCalculator'),
-    document.querySelector('#homeValueEstimator')
-    // ,
-    // document.querySelector('#cardHighSchool')
+    document.querySelector('#homeValueEstimator'),
+    document.querySelector('#basic_form')
 ];
 
 ScrollReveal({ reset: true, duration: 2000, distance: '25%', scale: 0.85, delay: 200 }); //changes for all the elements

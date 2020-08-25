@@ -28,10 +28,10 @@
 
     {% extends "template.html" %}
     {% block content %}
-    <section class="section has-background-light" >
+    <section class="section has-background-light">
         <div class="container">
             <div class="ourProductsTitle has-text-centered">
-                <h2 class="title is-2 animate__animated animate__bounce">
+                <h2 class="title is-size-1 animate__animated animate__bounce">
                     &nbsp;Our Products
                 </h2>
                 <p class="is-size-4 mx-6 px-6">
@@ -52,9 +52,9 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <h3 class="title is-3">Purchase a Home</h3>
+                            <h2 class="title is-size-2">Purchase a Home</h2>
                             <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
-                            <div class="content">
+                            <div class="content is-size-5">
                                 Whether you’re buying your first home or your vacation getaway, we have the
                                 mortgage solution that works best for you. Get your custom rate quote today.
                             </div>
@@ -74,9 +74,9 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <h3 class="title is-3">Refinance Your Home</h3>
+                            <h3 class="title is-2">Refinance Your Home</h3>
                             <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
-                            <div class="content">
+                            <div class="content is-size-5">
                                 We are fully committed to helping you refinance with competitive rates and the
                                 lowest fees industry wide.
                                 Check out orr Low Rates and Get Started Today.
@@ -97,12 +97,12 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <h3 class="title is-3">Apply Now</h3>
+                            <h3 class="title is-2">Apply Now</h3>
                             <!-- <h4 class="subtitle is-4">Subtitle</h4> -->
-                            <div class="content">
-                                Our secure loan application is quick to complete.
+                            <div class="content is-size-5">
+                                Our secure loan application is quick and easy to complete.
                                 You will be contacted by our team once your application
-                                has been submitted.
+                                has been submitted and reviewed.
 
                             </div>
                         </div>
@@ -115,6 +115,218 @@
             </div>
         </div>
     </section>
+
+    <section class="section has-background-grey-light">
+        <div class="container">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-two-thirds">
+                    <table class="table is-fullwidth is-hoverable is-size-6 is-striped" id="loan_types">
+                        <thead class="has-background-success">
+                            <tr>
+                                <th>Loan Type</th>
+                                <th>Interest Rate</th>
+                                <th>APR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Traditional (30 Year Fixed)</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>20 Year Fixed</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>15 Year Fixed</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>10 Year Fixed</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>Interest-Only</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>VA Loan</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>VA IRRRL Loan</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>FHA (203-k and 203-b)</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>Renovation Loan</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            <tr>
+                                <th>Flexible Loan Terms (21-29 years)</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div id="basic_form">
+                <div class="columns is-multiline">
+                    <div class="column is-8 is-offset-2 register">
+                        <div class="columns">
+                            <div class="column left">
+                                <h1 class="title is-1">Star Mortgage</h1>
+                                <h2 class="subtitle colored is-4">Looking for something else?</h2>
+                                <p>Don't hesitate to contact our wonderful team about your individual needs. Looking for
+                                    a
+                                    different rate and term, contact us. We will answer any and all questions that you
+                                    may
+                                    have. </p>
+                            </div>
+                            <div class="column right has-text-centered">
+                                <h1 class="title is-4">Sign up today</h1>
+                                <p class="description">We will contact you shortly.</p>
+                                <form action="/basic_form" method="POST">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input name="name" id="name" class="input is-medium" type="text"
+                                                placeholder="Name" minlength="4" maxlength="30" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="control">
+                                            <input name="email" id="email" class="input is-medium" type="email"
+                                                placeholder="Email" value=""
+                                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                        </div>
+                                    </div>
+
+                                    <button style="background-color: hsl(166, 67%, 51%);"
+                                        class="button is-block is-fullwidth is-medium">Submit</button>
+                                    <br>
+                                    <!-- <small><em>Lorem ipsum dolor sit amet consectetur.</em></small> -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --brandColor: hsl(166, 67%, 51%);
+            --background: rgb(247, 247, 247);
+            --textDark: hsla(0, 0%, 0%, 0.66);
+            --textLight: hsla(0, 0%, 0%, 0.33);
+        }
+
+        body {
+            background: var(--background);
+            height: 100vh;
+            color: var(--textDark);
+        }
+
+        .field:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .register {
+            margin-top: 3rem;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .left,
+        .right {
+            padding: 4.5rem;
+        }
+
+        .left {
+            border-right: 5px solid var(--background);
+        }
+
+        .left .title {
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .left .colored {
+            color: var(--brandColor);
+            font-weight: 500;
+            margin-top: 1rem !important;
+            letter-spacing: -1px;
+        }
+
+        .left p {
+            color: var(--textLight);
+            font-size: 1.15rem;
+        }
+
+        .right .title {
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .right .description {
+            margin-top: 1rem;
+            margin-bottom: 1rem !important;
+            color: var(--textLight);
+            font-size: 1.15rem;
+        }
+
+        .right small {
+            color: var(--textLight);
+        }
+
+        input {
+            font-size: 1rem;
+        }
+
+        input:focus {
+            border-color: var(--brandColor) !important;
+            box-shadow: 0 0 0 1px var(--brandColor) !important;
+        }
+    </style>
+
+    <style>
+        .tb_button {
+            padding: 1px;
+            cursor: pointer;
+            border-right: 1px solid #8b8b8b;
+            border-left: 1px solid #FFF;
+            border-bottom: 1px solid #fff;
+        }
+
+        .tb_button.hover {
+            border: 2px outset #def;
+            background-color: #f8f8f8 !important;
+        }
+    </style>
+
+
     <script src="static\js\template.js"></script>
     {% endblock %}
 </body>
