@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
 
 <head>
     {% include "header.html" %}
 </head>
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
-    <nav id="navBar" class="navbar is-fixed-top is-tab is-active is-info" role="navigation" aria-label="main navigation">
+    <nav id="navBar" class="navbar is-fixed-top is-tab is-active has-background-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item">
                 <img src="{{ url_for('static', filename='png/star_mortgage_logo.png') }}">
@@ -21,7 +20,7 @@
         <div id="navMenu" class="navbar-menu">
             <div class="navbar-start">
 
-                <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-item has-dropdown is-hoverable has-text-white">
                     <a class="navbar-link navbar-item" href="{{ url_for('home') }}">
                         Home
                     </a>

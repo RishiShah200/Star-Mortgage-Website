@@ -33,7 +33,9 @@ var nodeArray = [
     document.querySelector('#principalCalculator'),
     document.querySelector('#homeAffordabilityCalculator'),
     document.querySelector('#homeValueEstimator'),
-    document.querySelector('#basic_form')
+    document.querySelector('#basic_form'),
+    
+    document.querySelector("#interest_apr")
 ];
 
 ScrollReveal({ reset: true, duration: 2000, distance: '25%', scale: 0.85, delay: 200 }); //changes for all the elements
@@ -43,8 +45,6 @@ ScrollReveal().reveal(nodeArray);
 ScrollReveal().reveal('#cardPurchaseHome', {origin: 'left'})
 ScrollReveal().reveal('#cardRefinanceHome', {origin: 'bottom'})
 ScrollReveal().reveal('#cardApplyNow', {origin: 'right'})
-
-document.getElementById("p1").innerHTML = "New text!";
 
 const email = document.getElementById("email");
 const email_help = document.getElementById("email_help");
@@ -68,7 +68,7 @@ email.addEventListener("input", function (event) {
 
 })
 
-const user_name = document.getElementById("user_name");
+const user_name = document.getElementById("name");
 const name_help = document.getElementById("name_help");
 
 user_name.addEventListener("input", function (event) {
@@ -85,5 +85,12 @@ user_name.addEventListener("input", function (event) {
 })
 
 
+// const dropdown = document.getElementById("dropdown_item");
+// dropdown.addEventListener('click', function(event) {
+// //   event.stopPropagation();
+//   dropdown.classList.add("is-active");
+// })
 
-
+$(function() {
+    $('select').selectize();
+  });

@@ -16,54 +16,59 @@
         &nbsp;Feedback
     </h1>
 
-    <form class="form-horizontal" action="php-test.php" method="POST">
-        <div class="field">
-            <label class="label" for="name">Name</label>
-            <div class="control">
-                <input name="user_name" id="user_name" class="input" type="text" placeholder="Text input" minlength="4" maxlength="30" required>
-            </div>
-            <p id="name_help" class="help is-danger">Type your name here</p>
-        </div>
-
-        <div class="field">
-            <label class="label" for="email">Email</label>
-            <div class="control has-icons-left has-icons-right">
-                <input name="user_email" id="email" class="input" type="email" placeholder="Email input" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </span>
-            </div>
-            <p id="email_help" class="help is-danger">This email is invalid</p>
-        </div>
-
-        <div class="field">
-            <label class="label" for="subject">Subject</label>
-            <div class="control">
-                <div class="select">
-                    <select id = "subject" name="user_subject">
-                        <option>Issue with website</option>
-                        <option>Other Problems</option>
-                    </select>
+    <section class="section">
+        <div class="container">
+            <form class="form-horizontal" action="/report_issue_contact" method="POST">
+                <div class="field">
+                    <label class="label" for="name">Name</label>
+                    <div class="control">
+                        <input name="name" id="name" class="input" type="text" placeholder="Text input" minlength="4" maxlength="30" required>
+                    </div>
+                    <p id="name_help" class="help is-danger">Type your name here</p>
                 </div>
-            </div>
+        
+                <div class="field">
+                    <label class="label" for="email">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input name="email" id="email" class="input" type="email" placeholder="Email input" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p id="email_help" class="help is-danger">This email is invalid</p>
+                </div>
+        
+                <div class="field">
+                    <label class="label" for="subject">Subject</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id = "subject" name="subject">
+                                <option value="Issue With Website">Issue with website</option>
+                                <option value="Other Problems">Other Problems</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label" for="message">Message</label>
+                    <div class="control">
+                        <textarea id="message" name="message" class="textarea" placeholder="Textarea" required></textarea>
+                    </div>
+                </div>
+        
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button type="submit" class="button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
-        <div class="field">
-            <label class="label" for="message">Message</label>
-            <div class="control">
-                <textarea id="message" name="user_message" class="textarea" placeholder="Textarea" required></textarea>
-            </div>
-        </div>
-
-        <div class="field is-grouped">
-            <div class="control">
-                <button type="submit" class="button is-link">Submit</button>
-            </div>
-        </div>
-    </form>
+    </section>
 
     <script src="static\js\template.js"></script>
     {% endblock %}

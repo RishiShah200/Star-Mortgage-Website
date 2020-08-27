@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    {% include "header.html" %}
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+    {% extends "template.html" %}
+    {% block content %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-1 animate__animated animate__bounce has-text-centered">What's My APR?</h1>
+            <div class="container">
+                <iframe style="width:100%;height:100vh;"
+                    src="https://lhp-cdn.s3.us-east-2.amazonaws.com/calculator-widget/index.html#/" scrolling="yes"
+                    frameborder="no" framespacing="0"> </iframe>
+            </div>
+        </div>
+    </section>
+    <script src="https://lhp-cdn.s3.us-east-2.amazonaws.com/calculator-js/index.js"></script>
+    <script>
+        window.lhpCalculator.mount('calculator', { page: '/apr' }).then(client => {
+            client.on('saved', () => {
+
+                var busEvent = JSON.parse(event.data.replace("/*framebus*/", ""));
+
+                $.ajax({
+                    url: '/',
+                    type: 'post',
+                    dataType: 'json',
+                    success: function (data) {
+                        location.href = '/thank-you/';
+                    },
+                    data: {
+                        SiteOwnerID: 209324,
+                        LeadType: 'CalculatorResult',
+                        Payload: busEvent.eventData
+                    }
+                });
+
+            })
+        })
+    </script>
+
+    </div>
+
+    {% endblock %}
+
+</body>
+
+</html>

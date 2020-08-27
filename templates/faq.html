@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+
+</html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% include "header.html" %}
 </head>
-<body>
-    
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Frequently Asked Questions</h1>
+                <h2 class="subtitle is-2">FAQs</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container py-4">
+          <h2 class="title has-text-centered mb-6">Frequently Asked Questions</h2>
+          <div class="mb-6">
+            <div class="card block" id="interest_apr">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left"><figure class="image is-64x64"><img class="is-rounded" src="placeholder/pictures/bg_circle.svg?primary=00d1b2" alt=""></figure></div>
+                  <div class="media-content">
+                    <h3 class="title is-4">What is the difference between interest rate and APR?</h3>
+                    <p>Decentralization is a key aspect of PiperNet. Traditionally, to access data on a website, you needed to connect to a single server containing that data. This method of storing data makes it easy for third parties to get access to it, corrupt it or even delete it. In PiperNet it is securely stored on multiple devices in the network, which makes it harder to hack and interfere with your data.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card block">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left"><figure class="image is-64x64"><img class="is-rounded" src="placeholder/pictures/bg_circle.svg?primary=00d1b2" alt=""></figure></div>
+                  <div class="media-content">
+                    <h3 class="title is-4">Why shouldn't I just store my data on a Hooli Box?</h3>
+                    <p>That's just the thing - if you store your data in a single place, like Gavin Belsons' poorly-made server box, your data will very susceptible to hacking. Whereas on PiperNet, your data is safe with many copies to back it up from.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card block">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left"><figure class="image is-64x64"><img class="is-rounded" src="https://bulma.dev/placeholder/pictures/bg_circle.svg?primary=00d1b2" alt=""></figure></div>
+                  <div class="media-content">
+                    <h3 class="title is-4">What makes PiperNet so safe?</h3>
+                    <p>Our proprietary middle-out compression algorithm allows data to flow so fast that it can't be hacked! But, in all seriousness, the algorithm helps but it's the public, immutable ledger that makes it secure. This enables PiperNet users to exchange data without risk of it being intercepted by third parties.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card block">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left"><figure class="image is-64x64"><img class="is-rounded" src="https://bulma.dev/placeholder/pictures/bg_circle.svg?primary=00d1b2" alt=""></figure></div>
+                  <div class="media-content">
+                    <h3 class="title is-4">How long does it take to get a company up and running on PiperNet?</h3>
+                    <p>Access to the public network is granted within a day, but moving all your data and integrating your existing software depends on how big your company is. Startups can expect to be fully online within a week, enterprises can take up to a month due to large reliance on legacy systems and huge datasets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons is-centered"><a class="button is-primary" href="#">Read all questions</a></div>
+        </div>
+      </section>
+
+
+
+
+
+
+    {% extends "template.html" %}
+    {% block content %}
+
+
+    <script src="static\js\template.js"></script>
+    {% endblock %}
 </body>
+
 </html>

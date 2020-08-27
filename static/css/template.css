@@ -5,9 +5,9 @@
     justify-content: center;
 } */
 
-.navbar-item:hover {
+/* .navbar-item:hover {
   background-color: rgba(104, 102, 102, 0.562) !important;
-}
+} */
 
 .card {
   background-color: rgba(255, 255, 255, 50%);
@@ -47,8 +47,8 @@ input:invalid{
     height: 100%;
 }
 
-.is-transparent{
-    opacity: 0.7;
+.background-transparent{
+    opacity: 0.5;
 }
 
 th{
