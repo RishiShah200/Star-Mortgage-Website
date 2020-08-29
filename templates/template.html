@@ -5,12 +5,12 @@
 </head>
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
-    <nav id="navBar" class="navbar is-fixed-top is-tab is-active has-background-primary" role="navigation" aria-label="main navigation">
+    <nav id="navBar" class="navbar is-fixed-top is-tab is-active" role="navigation" aria-label="main navigation" style="background-color: #99B6D6;">
         <div class="navbar-brand">
-            <a class="navbar-item">
-                <img src="{{ url_for('static', filename='png/star_mortgage_logo.png') }}">
+            <!-- <a class="navbar-item"> -->
+                <img class="py-2 px-2" src="{{ url_for('static', filename='png/star_mortgage_logo.png') }}" width="100">
                 <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-            </a>
+            <!-- </a> -->
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -58,9 +58,6 @@
                     <div class="navbar-dropdown">
                         <a class="navbar-item" href="{{ url_for('about') }}">
                             About Us
-                        </a>
-                        <a class="navbar-item">
-                            Jobs
                         </a>
                         <a class="navbar-item" href="{{ url_for('contact') }}">
                             Contact

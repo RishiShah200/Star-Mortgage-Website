@@ -7,11 +7,6 @@
 
 <body data-gr-c-s-loaded="true" class="vsc-initialized">
 
-
-
-    {% extends "template.html" %}
-    {% block content %}
-
     <section class="section has-background-light">
         <div class="ourProductsTitle has-text-centered">
             <h2 class="title is-2 animate__animated animate__bounce">
@@ -24,9 +19,15 @@
             </p>
             <br>
         </div>
+    </section>
+
+    {% extends "template.html" %}
+    {% block content %}
+
+    <section class="section has-background-light">
         <div class="container">
             <div class="columns">
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="mortgageCalculator" class="card">
                         <!--animate__animated animate__zoomIn animate__delay-2s !-->
                         <div class="card-image has-text-centered">
@@ -48,7 +49,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="principalCalculator" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -67,7 +68,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="homeAffordabilityCalculator" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -88,7 +89,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="homeValueEstimator" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -109,7 +110,7 @@
                 </div>
             </div>
             <div class="columns">
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="interestOnlyCalculator" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -128,7 +129,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="extraPaymentCalculator" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -147,7 +148,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="taxBenifitsBuying" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -166,7 +167,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column hvr-grow">
                     <div id="whatsMyAPR" class="card">
                         <div class="card-image">
                             <figure class="image imgPad has-text-centered">
@@ -203,6 +204,7 @@
                 personal
                 finance issues.
             </h1>
+        </div>
         </div>
     </section>
     <script src="static\js\template.js"></script>

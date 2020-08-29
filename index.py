@@ -123,7 +123,7 @@ def report_issue_contact():
 def report_issue_email(name,reply_to,subject,message):
   # os.environ["GMAIL_ADDRESS"] = "hahsihsri@gmail.com" #need to set local environment variable. This exists on heroku but not local which is why it doesnt work.
   # os.environ["GMAIL_PASSWORD"] = "Musicisawesome0421"
-  mail_content = str(name + " filled out the report issue form.\n " + "They are reporting " + subject + ".\n" + "Their message is: \n" + message)
+  mail_content = str(name + " filled out the report issue form.\n" + "They are reporting " + subject + ".\n" + "Their message is: \n" + message)
   #The mail addresses and password
   sender_address = os.environ.get('GMAIL_ADDRESS')
   print(sender_address)
