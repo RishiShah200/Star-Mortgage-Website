@@ -7,8 +7,6 @@ import string
 
 import os
 
-from waitress import serve
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -256,5 +254,4 @@ def send_email(name,reply_to,interest,outreach,message):
 
 if __name__ == "__main__":
     app.run(debug=True)
-    # serve(app)
     
