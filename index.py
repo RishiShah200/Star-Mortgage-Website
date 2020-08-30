@@ -7,6 +7,8 @@ import string
 
 import os
 
+from waitress import serve
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -16,6 +18,14 @@ def home():
 @app.route("/calculators")
 def calculators():
   return render_template("calculators.html")
+
+@app.route("/admin/login")
+def login():
+  return render_template("admin/login.html")
+
+@app.route("/admin/dashboard")
+def dashboard():
+  return render_template("admin/dashboard.html")
 
 @app.route("/loans")
 def loans():
@@ -246,4 +256,5 @@ def send_email(name,reply_to,interest,outreach,message):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    # serve(app)
     

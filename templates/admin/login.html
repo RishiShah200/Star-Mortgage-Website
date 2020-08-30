@@ -1,0 +1,100 @@
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    {% include "header.html" %}
+
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <script src="/static/js/admin.js"></script>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-1 animate__animated animate__bounce has-text-centered pt-6">
+                &nbsp;Login
+            </h1>
+        </div>
+    </section>
+
+    {% extends "template.html" %}
+    {% block content %}
+
+
+    <section class="section">
+        <div class="container">
+            <form class="form-horizontal">
+
+                <div class="field">
+                    <label class="label" for="email">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" value=""
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="password">Password</label>
+                    <div class="control">
+                        <input name="password" id="password" class="input" type="password" placeholder="Password"
+                            value="" required>
+                    </div>
+                </div>
+
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button onclick="signUp(); return false;" class="button is-link">Sign Up</button>
+                    </div>
+                    <div class="control">
+                        <button onclick="signIn(); return false;" id="btn-login" class="button is-link">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- <script>
+        firebase.auth().onAuthStateChanged(function(user){
+            try {
+                console.log('login', user)
+                if(user){
+                    document.location.href = "{{ url_for('dashboard') }}";
+                }  
+            } catch (error) {
+                console.log(error);
+            }       
+        });
+    </script> -->
+
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                window.location.href = "{{ url_for('dashboard') }}";
+            }
+        });
+    </script>
+
+    {% endblock %}
+
+</body>
+
+</html>

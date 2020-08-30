@@ -1,0 +1,66 @@
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    {% include "header.html" %}
+
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <script src="/static/js/admin.js"></script>
+
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized">
+
+
+    {% extends "template.html" %}
+    {% block content %}
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title" style="font-size: 5em;">Admin</h1>
+            <div class="field">
+                <div class="control has-text-centered">
+                    <button onclick="signOut()" class="button is-link">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+    <!-- <script>
+        firebase.auth().onAuthStateChanged(function(user){
+            try {
+                console.log('login', user)
+                if(!user){
+                    document.location.href = "{{ url_for('login') }}";
+                }  
+            } catch (error) {
+                console.log(error);
+            }       
+        });
+    </script> -->
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (!user) {
+                window.location.href = "{{ url_for('login') }}";
+            }
+        });
+    </script>
+    {% endblock %}
+</body>
+
+</html>

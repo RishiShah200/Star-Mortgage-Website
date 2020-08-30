@@ -105,11 +105,11 @@ if (sPage == "report_issue") {
 }
 
 
-const dropdown = document.getElementById("dropdown_item");
-dropdown.addEventListener('click', function(event) {
-//   event.stopPropagation();
-  dropdown.classList.add("is-active");
-})
+// const dropdown = document.getElementById("dropdown_item");
+// dropdown.addEventListener('click', function(event) {
+// //   event.stopPropagation();
+//   dropdown.classList.add("is-active");
+// })
 
 // function onReady(callback) {
 //     var intervalID = window.setInterval(checkReady, 1000);
