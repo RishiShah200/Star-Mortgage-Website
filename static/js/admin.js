@@ -22,6 +22,11 @@ function signUp() {
 
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value).then(function (user) {
         var user = firebase.auth().currentUser;
+        user.sendEmailVerification().then(function() {
+            console.log("email sent");
+          }).catch(function(error) {
+            console.log(error);
+          });
         console.log(user); // Optional
     }, function (error) {
         // Handle Errors here.
@@ -31,6 +36,7 @@ function signUp() {
     });
 
     alert("Signed Up");
+    alert("Check email to confirm valid email address");
 }
 
 function signIn() {

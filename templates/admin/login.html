@@ -87,8 +87,13 @@
 
     <script>
         firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
+           // console.log(user.emailVerified);
+            if (firebase.auth().currentUser.emailVerified) {
                 window.location.href = "{{ url_for('dashboard') }}";
+            }
+            else{
+                console.log("Email is not verified");
+                console.log(firebase.auth().currentUser.emailVerified);
             }
         });
     </script>
