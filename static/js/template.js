@@ -52,15 +52,7 @@ ScrollReveal().reveal('#cardPurchaseHome', { origin: 'left' })
 ScrollReveal().reveal('#cardRefinanceHome', { origin: 'bottom' })
 ScrollReveal().reveal('#cardApplyNow', { origin: 'right' })
 
-ScrollReveal().reveal('#mortgageCalculator', { origin: 'left' })
-ScrollReveal().reveal('#principalCalculator', { origin: 'bottom' })
-ScrollReveal().reveal('#homeAffordabilityCalculator', { origin: 'top' })
-ScrollReveal().reveal('#homeValueEstimator', { origin: 'right' })
 
-ScrollReveal().reveal('#interestOnlyCalculator', { origin: 'right' })
-ScrollReveal().reveal('#extraPaymentCalculator', { origin: 'top' })
-ScrollReveal().reveal('#taxBenifitsBuying', { origin: 'bottom' })
-ScrollReveal().reveal('#whatsMyAPR', { origin: 'left' })
 
 
 
@@ -102,6 +94,17 @@ if (sPage == "report_issue") {
         }
 
     })
+}
+else if (sPage == "calculators"){
+    ScrollReveal().reveal('#mortgageCalculator', { origin: 'left' })
+    ScrollReveal().reveal('#principalCalculator', { origin: 'bottom' })
+    ScrollReveal().reveal('#homeAffordabilityCalculator', { origin: 'top' })
+    ScrollReveal().reveal('#homeValueEstimator', { origin: 'right' })
+    
+    ScrollReveal().reveal('#interestOnlyCalculator', { origin: 'right' })
+    ScrollReveal().reveal('#extraPaymentCalculator', { origin: 'top' })
+    ScrollReveal().reveal('#taxBenifitsBuying', { origin: 'bottom' })
+    ScrollReveal().reveal('#whatsMyAPR', { origin: 'left' })
 }
 
 
