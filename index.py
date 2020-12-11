@@ -140,7 +140,7 @@ def report_issue_email(name,reply_to,subject,message):
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
-  message['From'] = sender_address
+  message['From'] = "Star Mortgage"
   message['To'] = receiver_address
   message['Subject'] = name + " filled out the report issue form"  #The subject line
 
@@ -181,7 +181,7 @@ def send_basic_email(name,reply_to):
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
-  message['From'] = sender_address
+  message['From'] = "Star Mortgage"
   message['To'] = receiver_address
   message['Subject'] = name + " filled out the contact form"  #The subject line
 
@@ -223,7 +223,7 @@ def send_email(name,reply_to,interest,outreach,message):
   receiver_address = reply_to
   #Setup the MIME
   message = MIMEMultipart()
-  message['From'] = sender_address
+  message['From'] = "Star Mortgage"
   message['To'] = receiver_address
   message['Subject'] = name + " filled out the contact form"  #The subject line
 
