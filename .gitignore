@@ -1,5 +1,5 @@
 "sendgrid.env" 
 .vscode
-venv/
+env/
 config.py
 .env
